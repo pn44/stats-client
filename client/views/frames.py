@@ -19,6 +19,10 @@ class MainFrame(ttk.Frame):
             command=lambda: AddPageForm(self, callback=self.on_page_add))
         self.toolbar_new.pack()
         
+        self.toolbar_refresh = ToolbarButton(self.toolbar, text="Refresh", 
+            command=self.tv_refresh)
+        self.toolbar_refresh.pack()
+        
         ttk.Separator(self.toolbar, orient=tk.VERTICAL).pack(side=tk.LEFT, anchor=tk.NW, fill='y', pady=2)
         
         self.toolbar_view = ToolbarButton(self.toolbar, text="View", command=None, state=tk.DISABLED)

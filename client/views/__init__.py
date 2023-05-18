@@ -16,6 +16,7 @@ class MainWindow(tk.Tk):
         self.title("Please complete logging in...")
         # self.__icon = ImageTk.PhotoImage(Image.open(os.path.join(module_path, "resources", "icons", "app128.png")))
         # self.iconphoto(True, self.__icon)
+        self.iconbitmap("amsdc_logo.ico")
         
         LoginForm(self, callback=self._create_ui)
         
@@ -23,6 +24,7 @@ class MainWindow(tk.Tk):
         self.apiobj = apiobj
         
         self.title(f"AMSDC Stats Client - [{apiobj.username}]@[{apiobj.apiurl}]")
+        self.state('zoomed')
         
         self.menubar = tk.Menu(self, tearoff=0)
         self.app_menu = tk.Menu(self.menubar, tearoff=0)
