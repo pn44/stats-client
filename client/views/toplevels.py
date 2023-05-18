@@ -24,13 +24,13 @@ class LoginForm(tk.Toplevel):
 
         self.callback = callback
 
-        if getattr(sys, 'frozen', False):
-            application_path = sys._MEIPASS
-        elif __file__:
-            # application_path = os.path.dirname(__file__)
-            application_path = ""
-        # self.iconbitmap(os.path.join(application_path, "amsdc_logo.ico"))
-        
+        # if getattr(sys, 'frozen', False):
+            # application_path = sys._MEIPASS
+        # elif __file__:
+            # # application_path = os.path.dirname(__file__)
+            # application_path = ""
+        # # self.iconbitmap(os.path.join(application_path, "amsdc_logo.ico"))
+        self.iconbitmap("amsdc_logo.ico")
         
         self.heading_l = tk.Label(self, text="Authorization")
         self.heading_l.grid(
@@ -224,12 +224,12 @@ class ChangePwdForm(tk.Toplevel):
 
         self.callback = callback
 
-        if getattr(sys, 'frozen', False):
-            application_path = sys._MEIPASS
-        else:
-            # application_path = os.path.dirname(__file__)
-            application_path = ""
-        # self.iconbitmap(os.path.join(application_path, "amsdc_logo.ico"))
+        # if getattr(sys, 'frozen', False):
+            # application_path = sys._MEIPASS
+        # else:
+            # # application_path = os.path.dirname(__file__)
+            # application_path = ""
+        self.iconbitmap("amsdc_logo.ico")
         
         
         self.heading_l = tk.Label(self, text="Change password")
